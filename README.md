@@ -5,7 +5,7 @@ Async Task, Dynamic url based image downloader
 * The main UI runs in the main thread and the background operations are done in the worker threads.
 * The long running operation could be network operations like downloads, playing music etc,.
 * In our application, the AsyncTask service is used as the background thread.
-onPreexecute() - All the initializations (like setting up progress bar) are done here before starting the actual background task.
-doInBackground() - Actual background task is implemented here (In our case downloading the image from the url)
-onPostExecute() - After the background task completes (can be success or failure), this is further updated to the main UI (Main Thread).
+1) onPreExecute() - All the initializations (like setting up progress bar) are done here before starting the actual background task.
+2) doInBackground() - Actual background task is implemented here (In our case downloading the image from the url)
+4) onPostExecute() - After the background task completes (can be success or failure), this is further updated to the main UI (Main Thread).
 * User can enter the valid image URL and search, the downloaded image is displyed on the screen
